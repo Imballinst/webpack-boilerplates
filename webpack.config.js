@@ -91,14 +91,8 @@ if (isProd) {
         comments: false
       },
     }),
-    new WebpackMd5Hash(),
-    new ManifestPlugin(),
-    new ChunkManifestPlugin({
-      filename: 'chunk-manifest.json',
-      manifestVariable: 'webpackManifest'
-    }),
     new ExtractTextPlugin({
-      filename: 'css/[name].[chunkhash].css',
+      filename: 'css/[name].min.css',
       allChunks: true,
     })
   );
@@ -136,8 +130,7 @@ module.exports = {
   },
   output: {
     path: buildPath + '/assets/',
-    filename: isProd ? 'js/[name].[chunkhash].js' : 'js/[name].js',
-    chunkFilename: isProd ? 'js/[name].[chunkhash].js' : 'js/[name].js',
+    filename: isProd ? 'js/[name].min.js' : 'js/[name].js',
     publicPath: '/assets/'
   },
   module: {

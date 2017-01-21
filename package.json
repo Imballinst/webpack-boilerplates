@@ -1,8 +1,8 @@
 {
-  "name": "webpack-boilerplates",
-  "version": "1.0.0",
-  "description": "My webpack boilerplate for ReactJS",
-  "main": "webpack.config.js",
+  "name": "webpack-npm-react-boilerplate",
+  "version": "0.0.1",
+  "description": "My webpack boilerplate for React NPM package",
+  "main": "public/assets/js/index.js",
   "scripts": {
     "test": "jest",
     "build": "webpack",
@@ -14,7 +14,10 @@
   },
   "keywords": [
     "webpack",
-    "boilerplate"
+    "boilerplate",
+    "npm",
+    "package",
+    "reactjs"
   ],
   "author": "Try Ajitiono",
   "precommit": "test",
@@ -24,7 +27,6 @@
   },
   "homepage": "https://github.com/Imballinst/webpack-boilerplates#readme",
   "devDependencies": {
-    "axios-mock-adapter": "^1.7.1",
     "babel": "^6.5.2",
     "babel-eslint": "^7.1.1",
     "babel-jest": "^17.0.2",
@@ -34,7 +36,6 @@
     "babel-preset-stage-2": "^6.11.0",
     "babel-register": "^6.14.0",
     "bootstrap-sass": "^3.3.7",
-    "chunk-manifest-webpack-plugin": "^1.0.0",
     "css-loader": "^0.26.1",
     "enzyme": "^2.7.0",
     "eslint": "^3.9.1",
@@ -52,15 +53,12 @@
     "lodash": "^4.17.4",
     "node-sass": "^4.2.0",
     "pre-commit": "^1.2.2",
-    "redux-mock-store": "^1.2.1",
     "sass-loader": "^4.1.1",
     "sinon": "^1.17.5",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.0-rc.3",
-    "webpack-dev-server": "^2.2.0-rc.0",
-    "webpack-manifest-plugin": "^1.1.0",
-    "webpack-md5-hash": "0.0.5"
+    "webpack-dev-server": "^2.2.0-rc.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.13.0",
@@ -68,10 +66,7 @@
     "dotenv": "^2.0.0",
     "react": "^15.4.1",
     "react-addons-test-utils": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "react-redux": "^4.4.5",
-    "redux": "^3.5.2",
-    "redux-logger": "^2.6.1",
-    "redux-thunk": "^2.1.0"
+    "react-bootstrap": "^0.30.6",
+    "react-dom": "^15.4.1"
   }
 }
