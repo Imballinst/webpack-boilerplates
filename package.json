@@ -4,7 +4,8 @@
   "description": "My webpack boilerplate for ReactJS",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -15,6 +16,7 @@
     "boilerplate"
   ],
   "author": "Try Ajitiono",
+  "precommit": "test",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/Imballinst/webpack-boilerplates/issues"
