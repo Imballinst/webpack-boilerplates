@@ -6,7 +6,6 @@ const webpack = require('webpack');
 const path = require('path');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
-const WebpackMd5Hash = require('webpack-md5-hash');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const nodeEnv = process.env.NODE_ENV || 'development';
@@ -91,6 +90,11 @@ if (isProd) {
         comments: false
       },
     }),
+    new ManifestPlugin(),
+    new ChunkManifestPlugin({
+      filename: 'chunk-manifest.json',
+      manifestVariable: 'webpackManifest'
+    }),
     new ExtractTextPlugin({
       filename: 'css/[name].min.css',
       allChunks: true,
@@ -131,6 +135,7 @@ module.exports = {
   output: {
     path: buildPath + '/assets/',
     filename: isProd ? 'js/[name].min.js' : 'js/[name].js',
+    chunkFilename: isProd ? 'js/[name].min.js' : 'js/[name].js',
     publicPath: '/assets/'
   },
   module: {
@@ -147,7 +152,7 @@ module.exports = {
   devServer: {
     contentBase: './public',
     historyApiFallback: true,
-    port: 3001,
+    port: 3000,
     hot: true,
     inline: true,
     publicPath: '/assets/',
