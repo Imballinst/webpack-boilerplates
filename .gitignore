@@ -1,5 +1,4 @@
 node_modules/
 .gulp-scss-cache/
-public/dist/
 .env
 npm-debug.log
