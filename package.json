@@ -5,7 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack"
+    "build": "webpack",
+    "wds": "webpack-dev-server"
   },
   "repository": {
     "type": "git",

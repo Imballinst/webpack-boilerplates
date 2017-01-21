@@ -155,9 +155,6 @@ module.exports = {
     contentBase: './public',
     historyApiFallback: true,
     port: 3001,
-    proxy: {
-      "**": "http://localhost:3000"
-    },
     hot: true,
     inline: true,
     publicPath: '/assets/',
